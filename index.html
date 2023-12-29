@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&family=Roboto+Condensed:wght@300;400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	
+<body>
+         <header>
+    <!-- Create heart icon and shopping cart icon -->
+    <div id="heart"><i class="fa-regular fa-heart"><span  id="heartNum"></span></i></div>
+    <div id="addToCart"><i class="fa-solid fa-cart-shopping"><span  id="cartNumbers">0</span></i></div>
+  </header>
+  <main>
+    <div id="left-side">  
+      <!-- Breadcrumb and product photo section -->
+      <span  class="breadcrumbs">Shop >  men</span>
+      <div  id="productPhoto"><i class="fa-solid fa-shirt" id="tshirt-icon"></i></div>
+    </div>
+    <div id="right-side">
+      <!-- T-shirt details section -->
+      <h1  id="title"></h1>
+      <div  class="ratings"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></i><i class="fa-solid fa-star-half-stroke"><span id="users-ratings"></span></i><i class="fa-solid fa-comment" onclick="showComment()"><span>Comments</span></i><i class="fa-solid fa-heart" id="heart-active"onclick="heart()"><span>Add to Wishlist</span> </i></div>
+      <!-- Comments section -->
+      <div  id="commented"></div>
+      <span>Select Size <i class="fa-solid fa-arrow-right"></i></span>
+      <div id="sizes">
+        <div onclick=" choose('XS')"  id="XS">XS</div>
+         <div onclick=" choose('S')"  id="S">S</div>
+         <div onclick=" choose('M')" id="M">M</div>
+         <div  onclick=" choose('L')"   id="L">L</div>
+         <div onclick=" choose('XL')"   id="XL">XL</div>
+      </div>
+      <h3 class="colorAvail">Colors Available</h3>
+      <div id="colors">
+        <div  onclick="change('blue')" id="blue" style="background-color:#394867;"></div>
+        <div onclick="change('red')" id="red" style="background-color:#E74646"></div>
+        <div onclick="change('Yellow')" id="Yellow"  style="background-color:#F9D949"></div>
+        <div onclick="change('green')" id="green" style="background-color:#5D9C59"></div>
+        <div onclick="change('black')" id="black"style="background-color:#674747"></div>
+      </div>
+      <div id="buttons">
+        <!-- Add to cart and price tags -->
+        <a onclick="cart()" id="addCart" href="#">Add to Cart</a>
+        <a id="Price" href="#">$<span id="dynamic-price"><span></a>
+      </div>
+      <!-- T-shirt details section -->
+      <div  id="details">
+        <div  class="details-text">
+          <h3 onclick="desc()" id="description">Description</h3>
+          <h3 onclick="addDetails()" id="More-Details">More Details</h3>
+        </div>
+        <div  id="detail-box"></div>
+      </div>
+      <hr>
+      <!-- Product features section -->
+      <div  class="features">
+        <span><i class="fa-solid fa-credit-card"></i>   Secure Payment</span>
+        <span><i class="fa-solid fa-truck-fast"></i>   Free Shipping</span>
+        <span><i class="fa-solid fa-shirt"></i>  Good Material</span>
+        <span><i class="fa-solid fa-recycle"></i>   100% Recycle</span>
+      </div>
+    </div>
+  </main>
+	</body>
+</html>
